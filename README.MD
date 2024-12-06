@@ -37,6 +37,13 @@ Avec un repo _https://github.com/miage3-ae/miage-numres-step2b_ alors l'url est 
 1. Commiter  & Pusher le fichier **_Questions.md_**
 
 
+# Pull Request
+Une fois tous vos commits & Push réalisés sur votre repo, il est nécessaire de faire la **Pull Request** sur le repo **parent**.
+Pour cela, il suffit de :
+1. Se rendre sur votre compte personnel sur `GitHub`.
+1. Sur la page principale, se rendre sur `Contribute` > `Open pull Request`
+1. Remplir le titre de la pull request en précisant votre nom (vos noms) et `Create pull request`
+
 # Commandes Utiles
 * ```./mvnw clean compile ``` : Compilation du projet
 * ```./mvnw clean package``` : Construction du projet en mode JVM
