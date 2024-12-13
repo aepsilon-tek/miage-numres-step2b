@@ -31,7 +31,6 @@ Avec un repo _https://github.com/miage3-ae/miage-numres-step2b_ alors l'url est 
 1. Commiter  & Pusher le fichier **_Questions.md_**
 
 
-
 # Bilan
 1. Répondre aux questions Q9 et Q10   **_Questions.md_**
 1. Commiter  & Pusher le fichier **_Questions.md_**
