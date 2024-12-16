@@ -30,7 +30,7 @@ Taille:1 bytes
 
 
 # Q9 :  Que constatez-vous en comparant les métriques de la solution  initiales vs la votre vs celle-ci ?
-Réponse:
+Réponse: Le service de traduction étant non nécessaire a ralenti le temps de réponse de nos APIs (call d'api de traduction), en enlevant ces calls d'api de traduction, le temps de réponse de notre application à été amélioré de 20s pour l'API listerQuestions
 
 # Q10 : Quelle dernière amélioration pourriez-vous proposer?
-Réponse:
+Réponse: On peut activer le cache d'hibernate, 
