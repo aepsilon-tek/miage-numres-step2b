@@ -39,5 +39,29 @@ Size: 1 bytes
 # Q9 :  Que constatez-vous en comparant les métriques de la solution  initiales vs la votre vs celle-ci ?
 Réponse:
 
+Concernant la solution initiale vs celle-ci :
+
+## Initiale : Temps et  taille  réponse   liste les questions
+Temps: 20.259968s
+Taille: 883 bytes
+
+## Initiale :  Temps et  taille  réponse  liste des propositions
+Temps: 11.241979s
+Taille: 609 bytes
+
+## Initiale :  Temps et  taille  réponse  évaluation les réponses
+Temps: 0.001795s
+Taille: 1 bytes
+
+Nous constatons une très grande différence des résultats en mode JVM. Par rapport à la version initiale, celle-ci n'utilise pas le service DTO, ni même le service de traduction. De plus, Nous n'utilisons plus de QuizzService, mais un QuizzRessource, l'approche est différente, mais visiblement plus efficace.
+
+La différence majeure entre QuizzService et QuizzResource est principalement leur rôle : QuizzService est une couche métier qui encapsule la logique de traitement des questions et propositions. Elle encapsule les accès à la base de données avec des traitements supplémentaires.
+QuizzResource est une interface REST qui expose ces fonctionnalités via des endpoints HTTP pour les clients externes. Elle expose directement les entités Question et Proposal sans transformation en DTO. Cela signifie qu'elle retourne les objets tels quels.
+
+Ma Solution ressemble à la logique de celle-ci pour retirer le service de traduction et de DTO. Mais garde la même logique que l'initiale. Les résultat sont donc plus rapides, quasi similaires que celle-ci.
+
+
 # Q10 : Quelle dernière amélioration pourriez-vous proposer?
 Réponse:
+
+Gestion des entités, réduire les doublons généré avec la nouvelle approche.
