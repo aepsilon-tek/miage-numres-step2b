@@ -1,36 +1,36 @@
 # Q1 : Empreinte mémroire en mode JVM ?
-Réponse:
+Réponse: 174,49 Mo
 
 # Q2: Temps et  taille  réponse   liste les questions
-Temps:
-Taille:
+Temps:0.487356s
+Taille:158 bytes
 
 # Q3: Temps et  taille  réponse  liste des propositions
-Temps:
-Taille:
+Temps:0.088375s
+Taille:115 bytes
 
 # Q4: Temps et  taille  réponse  évaluation les réponses
-Temps:
-Taille:
+Temps:0.066719s
+Taille:1 bytes
 
 # Q5 : Empreinte mémroire en mode natif ?
-Réponse:
+Réponse:2,34 Mo
 
 # Q6: Temps et  taille  réponse   liste les questions
-Temps:
-Taille:
+Temps:0.005321s
+Taille:158 bytes
 
 # Q7: Temps et  taille  réponse  liste des propositions
-Temps:
-Taille:
+Temps:0.020300s
+Taille:115 bytes
 
 # Q8: Temps et  taille  réponse  évaluation les réponses
-Temps:
-Taille:
+Temps:0.011741s
+Taille:1 bytes
 
 
 # Q9 :  Que constatez-vous en comparant les métriques de la solution  initiales vs la votre vs celle-ci ?
-Réponse:
+Réponse: Le service de traduction étant non nécessaire a ralenti le temps de réponse de nos APIs (call d'api de traduction), en enlevant ces calls d'api de traduction, le temps de réponse de notre application à été amélioré de 20s pour l'API listerQuestions
 
 # Q10 : Quelle dernière amélioration pourriez-vous proposer?
-Réponse:
+Réponse: On peut activer le cache d'hibernate, 
