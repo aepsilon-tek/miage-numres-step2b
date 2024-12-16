@@ -29,7 +29,39 @@ Taille: 53 octets
 
 
 # Q9 :  Que constatez-vous en comparant les métriques de la solution  initiales vs la votre vs celle-ci ?
-Réponse:
+En comparant les solutions, voici les constats :
+
+1. **Temps d'exécution** :
+   - **Mode JVM** : Plus lent en raison du besoin d'interprétation.
+     - Exemple : Temps pour `/api/questions` : ~0.083026s.
+   - **Mode Natif** : Temps d'exécution considérablement réduit.
+     - Exemple : Temps pour `/api/questions` : ~0.001622s.
+
+2. **Empreinte mémoire** :
+   - **Mode JVM** : Plus élevée (223940 KB).
+   - **Mode Natif** : Plus optimisée (99548 KB).
+
+3. **Taille des réponses** :
+   - La taille des réponses reste constante (53 octets pour tous les endpoints).
+   - Les op
 
 # Q10 : Quelle dernière amélioration pourriez-vous proposer?
-Réponse:
+**Description** : Mise en place de la compression des réponses HTTP.
+
+**Problème** :  
+- Actuellement, la taille des réponses JSON peut être optimisée davantage pour les environnements où la bande passante est limitée.
+
+**Implémentation** :  
+- Activation de la compression **GZIP** côté serveur avec Quarkus.
+- Ajout des headers pour activer la compression côté client :
+  - `Accept-Encoding: gzip`.
+
+**Avantages** :  
+- Réduction significative de la taille des réponses.
+- Amélioration des temps de transfert.
+
+**Impact attendu** :
+- Exemple pour `/api/questions` :  
+   - Taille avant compression : **53 octets**.  
+   - Taille après compression : **~20-30 octets**.
+   - Temps total réduit en conséquence.
