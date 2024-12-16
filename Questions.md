@@ -30,7 +30,7 @@ Taille : 1 octet
 
 
 # Q9 :  Que constatez-vous en comparant les métriques de la solution  initiales vs la votre vs celle-ci ?
-Réponse:
+Réponse:Nous avons observé que les appels à l'API de traduction, bien que non nécessaires, ralentissaient significativement le temps de réponse des APIs, notamment l'API listerQuestions. En supprimant ces appels inutiles, le temps de réponse de l'application a été réduit de 20 secondes pour cette API.
 
 # Q10 : Quelle dernière amélioration pourriez-vous proposer?
-Réponse:
+Réponse:Une optimisation supplémentaire consisterait à activer le cache d'Hibernate pour améliorer les performances en réduisant les appels répétitifs à la base de données.
