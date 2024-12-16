@@ -1,17 +1,17 @@
 # Q1 : Empreinte mémroire en mode JVM ?
-Réponse:
+Réponse:L'application utilise une empreinte mémoire de 174,49 Mo en mode JVM.
 
 # Q2: Temps et  taille  réponse   liste les questions
-Temps:
-Taille:
+Temps : 0,487 secondes
+Taille : 158 octets
 
 # Q3: Temps et  taille  réponse  liste des propositions
-Temps:
-Taille:
+Temps : 0,088 secondes
+Taille : 115 octets
 
 # Q4: Temps et  taille  réponse  évaluation les réponses
-Temps:
-Taille:
+Temps : 0,067 secondes
+Taille : 1 octet
 
 # Q5 : Empreinte mémroire en mode natif ?
 Réponse:
