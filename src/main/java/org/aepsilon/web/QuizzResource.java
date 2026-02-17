@@ -54,11 +54,14 @@ public class QuizzResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public long evaluate(List<Proposal> rep){
+        if (rep == null || rep.isEmpty()) {
+            return 0;
+        }
         Log.infof("In evaluate ");
         Map<String, Object> params = new HashMap<>();
         params.put("isCorrect", true);
         params.put("idProposals", rep.stream().map(p->p.id).collect(Collectors.toList()));
 
-        return Proposal.count("correct= :isCorrect and id in :idProposals ",params);
+        return Proposal.count("correct = :isCorrect and id in :idProposals ",params);
     }
 }
