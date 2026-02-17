@@ -7,4 +7,7 @@ import jakarta.persistence.Entity;
 public class Question extends PanacheEntity {
     public String label;
 
+    @OneToMany(mappedBy = "question")
+    public List<Proposal> proposals;
+
 }
